@@ -1,22 +1,24 @@
-# Depuis1958
+## Attribution
+This project is a fork of [depuis1958](https://github.com/cljoly/depuis1958)
+by Clément Joly, adapted for the 2026 Brazilian presidential election.
+Licensed under AGPL-3.0.
 
-Modèle statistique du scrutin uninominal majoritaire à deux tours de l'élection
-présidentielle française, inspiré par FiveThirtyEight (et d'autres).
+# BoraPassarRaiva
 
-## Utiliser le modèle Python
+Modelo estatístico do escrutínio uninominal majoritário em dois turnos da eleição presidencial brasileira, inspirado pelo FiveThirtyEight (e outros).
 
-Le point d'entrée est la classe `ElectionModel` (dans `election.py`) qui
-modélise la probabilité totale de victoire.
+## Usar o modelo Python
 
-## Générer le site web complet
+O ponto de entrada é a classe `ElectionModel` (em `election.py`), que modela a probabilidade total de vitória.
 
-Le site web est basé sur des templates Jinja2. Tout est automatisé. Pour le
-générer, créer un symlink vers les sondages. Les miens sont ici: https://github.com/depuis1958/sondages :
+## Gerar o site completo
 
-    ln -s ../sondages/presidentielle/ data
+O site é baseado em templates Jinja2. Tudo é automatizado. Para gerá-lo, crie um symlink para as pesquisas. As minhas estão aqui: https://github.com/BoraPassarRaiva/pesquisas:
 
-Ensuite, le script `page.py` fait tout le boulot :
+    ln -s ../pesquisas/presidente/ data
+
+Em seguida, o script `page.py` faz todo o trabalho:
 
     ./page.py
 
-et génère un répertoire "public" avec le contenu html.
+e gera um diretório "public" com o conteúdo HTML.
